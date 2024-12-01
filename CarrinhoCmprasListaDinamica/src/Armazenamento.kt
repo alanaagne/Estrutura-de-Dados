@@ -1,8 +1,10 @@
 interface Armazenamento {
-    fun adicionarItem(item: Item)
-    fun removerItem(item: Item): Boolean
-    fun listarItens(): List<Item>
+    fun adicionarItem(item: Any?)
+    fun removerItem(posicao: Int): Any?
+    fun listarItens(): Array<Any?>
     fun limparCarrinho()
+    fun estaCheia(): Boolean
+    fun estaVazia(): Boolean
 }
 
 //interface para implementar um carinho de compras online
